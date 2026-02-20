@@ -18,13 +18,13 @@ add_action('wp_enqueue_scripts', function () {
   $theme_uri = get_template_directory_uri();
 
 
-  wp_enqueue_script(
-    'flowbite',
-    $theme_uri . '/node_modules/flowbite/dist/flowbite.min.js',
-    [],
-    null,
-    true
-  );
+  // wp_enqueue_script(
+  //   'flowbite',
+  //   $theme_uri . '/node_modules/flowbite/dist/flowbite.min.js',
+  //   [],
+  //   null,
+  //   true
+  // );
  wp_enqueue_script(
     'flowbite_production',
    $theme_uri . '/assets/vendor/flowbite.min.js',
