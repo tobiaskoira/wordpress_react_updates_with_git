@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+/* Active menu item */
+li.current-menu-item > a,
+li.current_page_item > a {
+  color: #2563eb;
+  font-weight: 600;
+
+}
+li a {
+  position: relative;
+  text-decoration: none;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms;
+  background: #2563eb;
+}
+
+li a:hover::after,
+li.current-menu-item > a::after,
+li.current_page_item > a::after {
+  transform: scaleX(1);
+}
+
+#menu li.current-menu-item > a,
+#menu li.current_page_item > a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+
+.wp-block-heading.hero-cover {
+  font-size: 3rem;
+  line-height: 1.25;
+  margin-top: 1.5em;
+
+ 
+}
+@media screen and (max-width: 768px) {
+  .wp-block-heading.hero-cover {
+    font-size: 2rem;
+    
+}
+}
+.wpcf7 .cf7-submit,
+.wpcf7 input.wpcf7-submit {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #2563eb;
+  cursor: pointer;margin-top: 2em;
+}
+
+.wpcf7 .cf7-submit:hover,
+.wpcf7 input.wpcf7-submit:hover {
+  background-color: #1d4ed8;
+}
+
+.wpcf7 .cf7-submit:focus,
+.wpcf7 input.wpcf7-submit:focus {
+  box-shadow: 0 0 0 4px #93c5fd;
+}
+
+/*delete backdrop from modal*/
+.bg-dark-backdrop\/70 {
+  pointer-events: none;
+}
+
+/* Ultimate Member inside Flowbite modal */
+#authentication-modal .um {
+  margin: 0;
+}
+
+#authentication-modal .um .um-field-label label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+}
+
+#authentication-modal .um input[type="text"],
+#authentication-modal .um input[type="email"],
+#authentication-modal .um input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px; /* под rounded-base */
+  border: 1px solid var(--border-default-medium);
+  background: var(--neutral-secondary-medium);
+}
+
+/* Кнопка логина */
+#authentication-modal .um input[type="submit"] {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+@layer components {
+  .flowbite-lead {
+    @apply mb-3 text-body;
+  }
+  .flowbite-lead::first-line {
+    @apply uppercase tracking-widest;
+  }
+  .flowbite-lead::first-letter {
+    @apply text-7xl font-bold text-heading me-3 float-start;
+  }
+  .flowbite-text {
+    @apply text-body;
+  }
+}

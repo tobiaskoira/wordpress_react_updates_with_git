@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "settings": {
+    "layout":{
+      "contentSize": "1200px",
+      "wideSize": "1400px"
+    },
+    "color": {
+      "palette": [
+        { "slug": "primary", "name": "Primary", "color": "#1d4ed8" },
+        { "slug": "secondary", "name": "Secondary", "color": "#7c3aed" },
+        { "slug": "base", "name": "Base", "color": "#ffffff" },
+        { "slug": "text", "name": "Text", "color": "#0f172a" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--base)",
+      "text": "var(--wp--preset--color--text)"
+    }
+  }
+}

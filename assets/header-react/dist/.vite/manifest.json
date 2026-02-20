@@ -1,0 +1,31 @@
+{
+  "_index-DKygz4kL.js": {
+    "file": "assets/index-DKygz4kL.js",
+    "name": "index",
+    "css": [
+      "assets/index-kxqihOEi.css"
+    ]
+  },
+  "_index-kxqihOEi.css": {
+    "file": "assets/index-kxqihOEi.css",
+    "src": "_index-kxqihOEi.css"
+  },
+  "src/main-accordion.jsx": {
+    "file": "assets/main-accordion-BotBZ_aH.js",
+    "name": "main-accordion",
+    "src": "src/main-accordion.jsx",
+    "isEntry": true,
+    "imports": [
+      "_index-DKygz4kL.js"
+    ]
+  },
+  "src/main-wp.jsx": {
+    "file": "assets/main-wp-C3hs6zi5.js",
+    "name": "main-wp",
+    "src": "src/main-wp.jsx",
+    "isEntry": true,
+    "imports": [
+      "_index-DKygz4kL.js"
+    ]
+  }
+}
