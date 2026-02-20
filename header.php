@@ -20,12 +20,7 @@
 					}
 			?> 
 		</div> -->
-<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
-			<a href="https://red-hawk-302088.hostingersite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-				<img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo">
-				<span class="self-center text-sm md:text-xl text-heading font-semibold whitespace-nowrap">Mytest_Page</span>
-			</a>
-			<div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">
+<div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">
 				<a href="#contact-form" class=" hidden md:flex text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium rounded-base text-base px-5 py-3 focus:outline-none">Contact me</a>
 				<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-cta" aria-expanded="false">
 					<span class="sr-only">Open main menu</span>
@@ -40,7 +35,7 @@
                         Log in
                     </button>
                 <?php } ?>
-			</div>
+</div>
 			<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
 				<?php 
 					wp_nav_menu([
