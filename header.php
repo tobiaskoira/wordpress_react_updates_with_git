@@ -15,7 +15,8 @@
 		<!-- <div>
 			<?php 
 				if ( ! is_user_logged_in(  ) ) {
-					echo do_shortcode( '[ultimatemember form_id="76"]' );	
+					// echo do_shortcode( '[ultimatemember form_id="76"]' );	
+                    echo do_shortcode( '[ultimatemember form_id="81"]' );	
 					}
 			?> 
 		</div> -->
