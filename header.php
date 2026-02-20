@@ -100,7 +100,8 @@ class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
             </form> -->
 
 <div class="pt-4 md:pt-6 ">
-	<?php echo do_shortcode( '[ultimatemember form_id="76"]' );	?>
+	<!-- <?php echo do_shortcode( '[ultimatemember form_id="76"]' );	?> -->
+    <?php echo do_shortcode( '[ultimatemember form_id="81"]' );	?>
 </div>
 
         </div>
