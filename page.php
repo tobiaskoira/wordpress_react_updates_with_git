@@ -4,24 +4,16 @@
 
    <div id="react-breadcrumbs"></div> 
    
-    <section class="mb-12">
+    <section class="mt-6">
     
 
-    <h2 class="text-3xl font-bold tracking-tight text-heading md:text-4xl"><?php the_title(); ?></h2>
+    <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1>
 
     </section>
 
 
-    <section class="mb-12">
-        <?php
-    while ( have_posts() ) :
-      the_post();
-      the_content(); 
-    endwhile;
-?>
-    </section>
 
-                
+           
 
 </main>
 <div id="accordion-react-root" class="site-main"></div>
