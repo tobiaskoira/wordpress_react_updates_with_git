@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import Breadcrumbs from "./Breadcrumbs";
+import Login from "./Login";
 
 // 🔹 Mount Breadcrumbs
 const breadcrumbsEl = document.getElementById("react-breadcrumbs");
@@ -12,6 +13,11 @@ if (breadcrumbsEl) {
 const mountEl = document.getElementById("react-posts-filtering");
 if (mountEl) {
   createRoot(mountEl).render(<CategoriesFilter />);
+}
+// 🔹 Mount Login
+const loginEl = document.getElementById("react-login");
+if (loginEl) {
+  createRoot(loginEl).render(<Login />);
 }
 
 function PostsToggle() {
