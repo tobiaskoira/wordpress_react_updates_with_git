@@ -21,7 +21,7 @@ export default function Login() {
         setToken(data.token);
         console.log("JWT Token:", data.token);
         alert("Welcome! You are logged in.");
-        window.location.href = "/profile"; // Redirect to homepage or dashboard
+        window.location.href = "/profile"; // Redirect to profile page after login
       } else if (data.message) {
         setError(data.message);
       }

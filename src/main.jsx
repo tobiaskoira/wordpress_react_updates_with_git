@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./style.css";
 import Breadcrumbs from "./Breadcrumbs";
 import Login from "./Login";
-
+import Profile from "./Profile";    
 // 🔹 Mount Breadcrumbs
 const breadcrumbsEl = document.getElementById("react-breadcrumbs");
 if (breadcrumbsEl) {
@@ -19,7 +19,12 @@ const loginEl = document.getElementById("react-login");
 if (loginEl) {
   createRoot(loginEl).render(<Login />);
 }
-
+// 🔹 Mount Profile
+const profileEl = document.getElementById("react-profile");
+if (profileEl) {
+  createRoot(profileEl).render(<Profile />);
+}
+// 🔹 Mount Posts Toggle
 function PostsToggle() {
   const [posts, setPosts] = useState([]);
   const [expanded, setExpanded] = useState(false);
