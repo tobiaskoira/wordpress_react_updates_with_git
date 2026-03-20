@@ -20,12 +20,12 @@ export default function Login() {
       if (data.token) {
         setToken(data.token);
         console.log("JWT Token:", data.token);
-        alert("Вы вошли!"); // можно потом сделать красивее
+        alert("Welcome! You are logged in.");
       } else if (data.message) {
         setError(data.message);
       }
     } catch (err) {
-      setError("Ошибка соединения");
+      setError("Error connecting to server");
     }
   }
 
@@ -34,29 +34,31 @@ export default function Login() {
       {token ? (
         <p>Вы вошли!</p>
       ) : (
-        <form onSubmit={handleLogin} className="flex flex-col gap-2">
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="px-3 py-2 border rounded-base"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="px-3 py-2 border rounded-base"
-          />
-          <button
-            type="submit"
-            className="bg-primary text-white px-4 py-2 rounded-base"
-          >
-            Log In
-          </button>
-          {error && <p className="text-red-500">{error}</p>}
-        </form>
+
+
+<form onSubmit={handleLogin} class="max-w-sm mx-auto">
+  <div class="mb-5">
+    <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
+    <input type="text" id="text" 
+    class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
+    placeholder="Username" 
+    required value={username}
+    onChange={(e) => setUsername(e.target.value)}/>
+  </div>
+  <div class="mb-5">
+    <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
+    <input type="password" 
+    id="password" 
+    class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" 
+    placeholder="••••••••" 
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    required />
+  </div>
+
+  <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Log in</button>
+</form>
+
       )}
     </div>
   );
