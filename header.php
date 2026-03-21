@@ -31,16 +31,19 @@
 					<span class="sr-only">Open main menu</span>
 					<svg class="w-16 h-16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"></path></svg>
 				</button>
-                <?php if ( is_user_logged_in() ) { ?>
-                    <a href="<?php echo wp_logout_url( home_url() ); ?>" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium rounded-base text-base px-5 py-3 focus:outline-none">
-                        Log out
-                    </a>
-                <?php } else { ?>
-                    <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" type="button">
-                        Log in
-                    </button>
-                <?php } ?>
-</div>
+           
+             
+                    <?php if (is_user_logged_in()) : ?>
+                        <a href="<?php echo wp_logout_url(home_url()); ?>" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none inline-block">
+                            Log out
+                        </a>
+                    <?php else : ?>
+                        <button id="auth-button" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" type="button">
+                            Log in
+                        </button>
+                    <?php endif; ?>
+               
+            </div>
 			<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
 				<?php 
 					wp_nav_menu([
@@ -77,31 +80,11 @@ class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
                     <span class="sr-only">Close modal</span>
                 </button>
             </div>
-            <!-- Modal body -->
-	
-            <!-- <form action="#" class="pt-4 md:pt-6 ">
-                <div class="mb-4">
-                    <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-                    <input type="email" id="email" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="example@company.com" required />
-                </div>
-                <div>
-                    <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Your password</label>
-                    <input type="password" id="password" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="•••••••••" required />
-                </div>
-                <div class="flex items-start my-6">
-                    <div class="flex items-center">
-                        <input id="checkbox-remember" type="checkbox" value="" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
-                        <label for="checkbox-remember" class="ms-2 text-sm font-medium text-heading">Remember me</label>
-                    </div>
-                    <a href="#" class="ms-auto text-sm font-medium text-fg-brand hover:underline">Lost Password?</a>
-                </div>
-                <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none w-full mb-3">Login to your account</button>
-                <div class="text-sm font-medium text-body">Not registered? <a href="#" class="text-fg-brand hover:underline">Create account</a></div>
-            </form> -->
+           
 
-<div class="pt-4 md:pt-6 ">
- <div id="react-login"></div>
-</div>
+            <div class="pt-4 md:pt-6 ">
+            <div id="react-login"></div>
+            </div>
 
         </div>
     </div>

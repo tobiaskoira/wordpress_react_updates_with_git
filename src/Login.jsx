@@ -39,6 +39,11 @@ export default function Login() {
 
 
     <form onSubmit={handleLogin} class="max-w-sm mx-auto">
+          {error && (
+            <div class="mb-4 p-3 bg-danger-soft border border-danger-subtle text-danger-strong rounded-base">
+              {error}
+            </div>
+          )}
     <div class="mb-5">
         <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Your email</label>
         <input type="text" id="text" 
