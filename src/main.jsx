@@ -4,6 +4,7 @@ import "./style.css";
 import Breadcrumbs from "./Breadcrumbs";
 import Login from "./Login";
 import Profile from "./Profile";    
+import AuthButton from "./Authbutton";
 // 🔹 Mount Breadcrumbs
 const breadcrumbsEl = document.getElementById("react-breadcrumbs");
 if (breadcrumbsEl) {
@@ -24,6 +25,13 @@ const profileEl = document.getElementById("react-profile");
 if (profileEl) {
   createRoot(profileEl).render(<Profile />);
 }
+
+// 🔹 Mount AuthButton
+const authButtonEl = document.getElementById("react-auth-button");
+if (authButtonEl) {
+  createRoot(authButtonEl).render(<AuthButton />);
+}
+
 // 🔹 Mount Posts Toggle
 function PostsToggle() {
   const [posts, setPosts] = useState([]);

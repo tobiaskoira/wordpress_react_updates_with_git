@@ -31,17 +31,7 @@
 					<span class="sr-only">Open main menu</span>
 					<svg class="w-16 h-16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"></path></svg>
 				</button>
-           
-             
-                    <?php if (is_user_logged_in()) : ?>
-                        <a href="<?php echo wp_logout_url(home_url()); ?>" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none inline-block">
-                            Log out
-                        </a>
-                    <?php else : ?>
-                        <button id="auth-button" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" type="button">
-                            Log in
-                        </button>
-                    <?php endif; ?>
+                <div id="react-auth-button"></div>
                
             </div>
 			<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
