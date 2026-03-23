@@ -20,7 +20,7 @@
 					}
 			?> 
 		</div> -->
-<div class="mx-auto max-w-[1400px] px-4 md:px-6 lg:px-8 flex flex-wrap items-center justify-between p-2 md:p-4">
+<div class="mx-auto max-w-screen-xl px-4 md:px-6 lg:px-8 flex flex-wrap items-center justify-between p-2 md:p-4">
 			<a href="https://red-hawk-302088.hostingersite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
 				<img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo">
 				<span class="self-center text-sm md:text-xl text-heading font-semibold whitespace-nowrap">Mytest_Page</span>
