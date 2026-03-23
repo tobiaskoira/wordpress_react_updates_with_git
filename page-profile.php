@@ -2,7 +2,7 @@
 
 
 
-<div id="react-profile" class="w-full max-w-screen-xl mx-auto pt-24"></div>
+<div id="react-profile" class="w-full max-w-screen-xl mx-auto pt-24 flex-grow"></div>
            
 
 
