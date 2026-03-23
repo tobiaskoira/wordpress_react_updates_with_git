@@ -22,6 +22,7 @@ export default function Login() {
         console.log("JWT Token:", data.token);
         alert("Welcome! You are logged in.");
         localStorage.setItem("jwtToken", data.token);
+        window.dispatchEvent(new Event("jwtTokenUpdated")); // Trigger storage event to update AuthButton
         window.location.href = "/profile"; // Redirect to profile page after login
       } else if (data.message) {
         setError(data.message);

@@ -19,7 +19,7 @@ export default function AuthButton() {
     if (confirmed) {
       localStorage.removeItem("jwtToken");
       setToken(null);
-      window.location.reload();
+      window.location.href = "/"; // Redirect to homepage after logout
     }
   };
 
