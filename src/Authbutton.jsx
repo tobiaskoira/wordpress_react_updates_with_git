@@ -13,14 +13,22 @@ export default function AuthButton() {
 
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
-
+  
   const handleLogout = () => {
     const confirmed = window.confirm("Are you sure you want to log out?");
     if (confirmed) {
       localStorage.removeItem("jwtToken");
       setToken(null);
+      window.dispatchEvent(new Event("jwtTokenUpdated"));
       window.location.href = "/"; // Redirect to homepage after logout
     }
+  };
+
+  const openLoginModal = () => {
+    const modal = document.getElementById("authentication-modal");
+    if (!modal) return;
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
   };
 
   if (token) {
@@ -35,12 +43,9 @@ export default function AuthButton() {
       </button>
     );
   } else {
-    
     return (
       <button
-       
-        data-modal-target="authentication-modal"
-        data-modal-toggle="authentication-modal"
+        onClick={openLoginModal}
         className="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none"
       >
         Log in
