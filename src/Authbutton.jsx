@@ -27,7 +27,7 @@ export default function AuthButton() {
 
     return (
       <button
-        id="auth-button"
+        id="react-auth-button"
         onClick={handleLogout}
         className="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none"
       >
