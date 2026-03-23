@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<main class="flex pt-24">
 
-<div id="react-profile" py-4></div>
+
+<div id="react-profile" class="w-full max-w-screen-xl mx-auto p-4 md:py-8"></div>
            
 
-</main>
+
 <div id="accordion-react-root" class="site-main"></div>
 <?php get_footer(); ?>
