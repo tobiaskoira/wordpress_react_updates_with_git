@@ -8,10 +8,7 @@ export default function Profile() {
   const token = localStorage.getItem("jwtToken");
 
   useEffect(() => {
-    if (!token) {
-      window.location.href = "/login"; // редирект если нет токена
-      return;
-    }
+ 
 
     async function fetchUser() {
       try {
@@ -36,7 +33,7 @@ export default function Profile() {
   return (
     <div className="flex">
       {/* Сайдбар */}
-      <aside className="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 bg-neutral-primary-soft border-e border-default p-4 overflow-y-auto">
+      <aside className=" w-64  bg-neutral-primary-soft border-e border-default p-4 overflow-y-auto">
         <ul className="space-y-2 font-medium">
           <li>
             <a href="/profile" className="flex items-center px-2 py-1.5 hover:bg-neutral-tertiary rounded-base">
@@ -60,7 +57,9 @@ export default function Profile() {
       <div className="p-4 sm:ml-64 flex-1">
         <h1 className="text-2xl font-bold mb-4">Welcome, {userData.name}</h1>
         <p>Email: {userData.email}</p>
-        {/* Можно сюда рендерить отдельные компоненты для постов, заказов и т.д. */}
+        <p>Username: {userData.slug}</p>
+        <p>Registration Date: {userData.registered_date}</p>
+      
       </div>
     </div>
   );
