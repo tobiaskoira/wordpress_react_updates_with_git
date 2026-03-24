@@ -12,7 +12,7 @@ export default function Profile() {
 
     async function fetchUser() {
       try {
-        const res = await fetch("/wp-json/wp/v2/users/me", {
+        const res = await fetch("/wp-json/mytheme/v1/user-data", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();

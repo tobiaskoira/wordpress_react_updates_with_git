@@ -62,6 +62,25 @@ if (!empty($entry['css'])) {
 });
 
 
-
+//rest api endpoint for user data
+add_action('rest_api_init', function () { 
+    register_rest_route('mytheme/v1', '/user-data', [
+        'methods' => 'GET',
+        'callback' => function () {
+            if (!is_user_logged_in()) {
+                return new WP_Error('not_logged_in', 'You must be logged in to access this endpoint.', ['status' => 401]);
+            }
+            $current_user = wp_get_current_user();
+            return [
+                'id' => $current_user->ID,
+                'name' => $current_user->display_name,
+                'email' => $current_user->user_email,
+                'slug' => $current_user->user_nicename,
+                'registered_date' => $current_user->user_registered,
+                'meta' => get_user_meta($current_user->ID),
+            ];
+        },
+    ]);
+});
 
 
