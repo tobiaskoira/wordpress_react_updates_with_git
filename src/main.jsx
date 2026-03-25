@@ -3,7 +3,8 @@ import { createRoot } from "react-dom/client";
 import "./style.css";
 import Breadcrumbs from "./Breadcrumbs";
 import Login from "./Login";
-import Profile from "./Profile";    
+import Profile from "./Profile";  
+import Posts from "./Posts";  
 import AuthButton from "./Authbutton";
 // 🔹 Mount Breadcrumbs
 const breadcrumbsEl = document.getElementById("react-breadcrumbs");
@@ -25,7 +26,11 @@ const profileEl = document.getElementById("react-profile");
 if (profileEl) {
   createRoot(profileEl).render(<Profile />);
 }
-
+// 🔹 Mount Posts
+const postsEl = document.getElementById("react-posts");
+if (postsEl) {
+  createRoot(postsEl).render(<Posts />);
+}
 // 🔹 Mount AuthButton
 const authButtonEl = document.getElementById("react-auth-button");
 if (authButtonEl) {
