@@ -27,7 +27,7 @@ if (profileEl) {
   createRoot(profileEl).render(<Profile />);
 }
 // 🔹 Mount Posts
-const postsEl = document.getElementById("react-posts");
+const postsEl = document.getElementById("react-profile-posts");
 if (postsEl) {
   createRoot(postsEl).render(<Posts />);
 }
