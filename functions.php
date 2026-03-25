@@ -1,5 +1,5 @@
 <?php
-
+require_once get_template_directory() . '/inc/cpt-tickets.php';
 add_action('after_setup_theme', function(){
 
     add_theme_support('title-tag');
