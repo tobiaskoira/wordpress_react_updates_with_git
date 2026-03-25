@@ -5,7 +5,8 @@ import Breadcrumbs from "./Breadcrumbs";
 import Login from "./Login";
 import Profile from "./Profile";  
 import Posts from "./Posts";  
-import AuthButton from "./Authbutton";
+import AuthButton from "./Authbutton"
+import Tickets  from "./Tickets";
 // 🔹 Mount Breadcrumbs
 const breadcrumbsEl = document.getElementById("react-breadcrumbs");
 if (breadcrumbsEl) {
@@ -30,6 +31,11 @@ if (profileEl) {
 const postsEl = document.getElementById("react-profile-posts");
 if (postsEl) {
   createRoot(postsEl).render(<Posts />);
+}
+// 🔹 Mount Tickets
+const ticketsEl = document.getElementById("react-profile-tickets");
+if (ticketsEl) {
+  createRoot(ticketsEl).render(<Tickets />);
 }
 // 🔹 Mount AuthButton
 const authButtonEl = document.getElementById("react-auth-button");

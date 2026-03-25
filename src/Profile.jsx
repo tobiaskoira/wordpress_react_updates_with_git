@@ -46,6 +46,11 @@ export default function Profile() {
             </a>
           </li>
           <li>
+            <a href="/profile/tickets" className="flex items-center px-2 py-1.5 hover:bg-neutral-tertiary rounded-base">
+              My Tickets
+            </a>
+          </li>
+          <li>
             <a href="/profile/settings" className="flex items-center px-2 py-1.5 hover:bg-neutral-tertiary rounded-base">
               Settings
             </a>

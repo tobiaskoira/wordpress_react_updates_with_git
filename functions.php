@@ -1,6 +1,7 @@
 <?php
 require_once get_template_directory() . '/inc/cpt-tickets.php';
 require_once get_template_directory() . '/inc/ticket-status.php';
+require_once get_template_directory() . '/inc/api-tickets.php';
 add_action('after_setup_theme', function(){
 
     add_theme_support('title-tag');
