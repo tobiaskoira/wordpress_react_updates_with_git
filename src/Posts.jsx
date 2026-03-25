@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function Profile() {
+export default function Posts() {
   const [userData, setUserData] = useState(null);
   const [userPosts, setUserPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,7 @@ export default function Profile() {
 
     fetchUser();
   }, [token]);
-git
+
   useEffect(() => {
     if (!userData?.id) return;
 
