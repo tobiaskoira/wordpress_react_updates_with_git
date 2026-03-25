@@ -76,9 +76,7 @@ git
       {/* Контент */}
       <div className="p-4 flex-1">
         <h1 className="text-2xl font-bold mb-4">Welcome, {userData.name}</h1>
-        <p>Email: {userData.email}</p>
-        <p>Username: {userData.slug}</p>
-        <p>Registration Date: {userData.registered_date}</p>
+
 
         <h2 className="text-xl font-bold mt-8 mb-4">My Posts ({userPosts.length})</h2>
 
