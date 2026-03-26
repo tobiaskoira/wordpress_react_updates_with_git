@@ -34,13 +34,13 @@ export default function AuthButton() {
   if (token) {
 
     return (
-         <><DropdownDivider />
+     
          <button
 
             onClick={handleLogout}
             className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">
             Log out
-        </button></>
+        </button>
     );
   } else {
     return (
