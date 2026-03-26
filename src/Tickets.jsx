@@ -102,8 +102,8 @@ export default function Tickets() {
         </ul>
       </aside>
         <div className="flex-1 p-4">
-            <h1 className="text-2xl font-bold mb-4">Welcome, {userData.name}</h1>
-        <h2 className="text-xl font-bold mt-8 mb-4">My Tickets</h2>
+            <h1 className="text-2xl font-bold mb-4">My Tickets</h1>
+
 
         <form onSubmit={handleSubmit} className="grid gap-6 mb-6 justify-items-start">
             <h3 className="font-semibold mb-4 text-3xl tracking-tight text-heading md:text-4xl">Submit a Ticket</h3>
