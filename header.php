@@ -31,21 +31,20 @@
 					<span class="sr-only">Open main menu</span>
 					<svg class="w-16 h-16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"></path></svg>
 				</button>
-                <div id="react-auth-button"></div>
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
-                Dropdown button 
-                <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+                <!-- <div id="react-auth-button"></div> -->
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="hidden md:flex text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium rounded-base text-base px-5 py-3 focus:outline-none" type="button">
+                Sign in account 
+                 <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
                 </button>
 
                 <!-- Dropdown menu -->
-                <div id="dropdown" class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+                <div id="dropdown" class="z-10 hidden bg-white border border-default-medium rounded-base shadow-lg w-44">
                     <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
-                    <li>
-                        <div id="react-auth-button"></div>
+                    <li> 
+                     
+                        <p id="react-auth-button"></p>
                     </li>
-                                       <li>
-                        <p>test</p>
-                    </li>
+                 
                     </ul>
                 </div>
                
