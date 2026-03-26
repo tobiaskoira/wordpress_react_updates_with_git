@@ -6,7 +6,6 @@ export default function Tickets() {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
-  const [userData, setUserData] = useState(null);
   const token = localStorage.getItem("jwtToken");
 
   async function loadTickets() {
@@ -26,24 +25,6 @@ export default function Tickets() {
   }
 
   useEffect(() => {
-    async function loadUser() {
-      try {
-        const res = await fetch('/wp-json/wp/v2/users/me', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-        const data = await res.json();
-        if (res.ok) {
-          setUserData(data);
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-    loadUser();
-
     let interval = null;
 
     const refresh = async () => {
@@ -121,7 +102,7 @@ export default function Tickets() {
         </ul>
       </aside>
         <div className="flex-1 p-4">
-            <h1 className="text-2xl font-bold mb-4">Welcome, {userData ? userData.name : 'Guest'}</h1>
+            <h1 className="text-2xl font-bold mb-4">Welcome, {userData.name}</h1>
         <h2 className="text-xl font-bold mt-8 mb-4">My Tickets</h2>
 
         <form onSubmit={handleSubmit} className="grid gap-6 mb-6 justify-items-start">
