@@ -87,10 +87,10 @@ export default function Tickets() {
         </ul>
       </aside>
         <div className="flex-1 p-4">
-        <h1 className="text-2xl font-bold mb-6">My Tickets</h1>
+        <h1 className="text-4xl font-bold">My Tickets</h1>
 
-        <form onSubmit={handleSubmit} className="grid gap-6 mb-6 md:grid-cols-2">
-            <h2 className="text-xl font-semibold mb-4text-3xl font-bold tracking-tight text-heading md:text-4xl">Submit a Ticket</h2>
+        <form onSubmit={handleSubmit} className="grid gap-6 mb-6 justify-items-start">
+            <h2 className="text-xl font-semibold mb-4text-3xl tracking-tight text-heading md:text-4xl">Submit a Ticket</h2>
 
             <input
             type="text"
@@ -125,7 +125,7 @@ export default function Tickets() {
             {tickets.map((ticket) => (
                 <a
                 key={ticket.id}
-                href={`/profile/tickets/${ticket.id}`}
+                href={`/profile/ticket?ticket_id=${ticket.id}`}
                 className="block border p-4 rounded-base"
                 >
                 <div className="flex justify-between gap-4">
