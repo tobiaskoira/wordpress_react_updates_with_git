@@ -2,11 +2,12 @@
 
 <main class="flex-1 mx-auto max-w-[1400px] px-4 md:px-6 lg:px-8 pt-24">
 
-   <div id="react-breadcrumbs"></div> 
+  
    
-    <section class="mt-6">
-    
+    <section class="mt-6 flex flex-col sm:flex-row justify-content:space-between items-center">
+    <div id="react-breadcrumbs"></div> 
 
+    <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1>
 
     </section>
 
@@ -64,7 +65,7 @@
 </aside>
 
 <div class="p-4 flex-1">
-    <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1>
+    <!-- <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1> -->
 
     <p class="mb-3 text-body">
         <?php
