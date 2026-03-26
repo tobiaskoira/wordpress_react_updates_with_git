@@ -25,8 +25,23 @@ export default function Tickets() {
   }
 
   useEffect(() => {
+    let interval = null;
+
+    const refresh = async () => {
+      setLoading(true);
+      await loadTickets();
+    };
+
+    // first load immediately
     loadTickets();
-  }, []);
+
+    // refresh every 10 seconds
+    interval = setInterval(refresh, 10000);
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [token]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -122,19 +137,27 @@ export default function Tickets() {
             <div>No tickets yet.</div>
         ) : (
             <div className="space-y-4">
-            {tickets.map((ticket) => (
-                <a
-                key={ticket.id}
-                href={`/profile/ticket?ticket_id=${ticket.id}`}
-                className="block border p-4 rounded-base"
-                >
-                <div className="flex justify-between gap-4">
-                    <h3 className="font-semibold">{ticket.title}</h3>
-                    <span className="text-sm">{ticket.status}</span>
-                </div>
-                <p className="mt-2 text-sm opacity-80">{ticket.content}</p>
-                </a>
-            ))}
+            {tickets.map((ticket) => {
+                const isAdmin = ticket.author_role === "administrator" || ticket.is_admin;
+                const cardClasses = isAdmin
+                  ? "block border border-blue-500 bg-blue-50 p-4 rounded-base"
+                  : "block border border-neutral-200 bg-white p-4 rounded-base";
+
+                return (
+                  <a
+                    key={ticket.id}
+                    href={`/profile/ticket?ticket_id=${ticket.id}`}
+                    className={cardClasses}
+                  >
+                    <div className="flex justify-between gap-4">
+                      <h3 className="font-semibold">{ticket.title}</h3>
+                      <span className="text-sm">{ticket.status}</span>
+                    </div>
+                    <p className="mt-2 text-sm opacity-80">{ticket.content}</p>
+                    <p className="mt-2 text-xs text-neutral-500">{isAdmin ? "Admin response" : "User request"}</p>
+                  </a>
+                );
+            })}
             </div>
         )}
         </div>

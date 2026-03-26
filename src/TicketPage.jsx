@@ -147,13 +147,25 @@ export default function TicketPage() {
           <div className="mb-4">No messages yet.</div>
         ) : (
           <div className="space-y-4 mb-6">
-            {messages.map((item) => (
-              <div key={item.id} className="border rounded-base p-4">
-                <div className="font-semibold">{item.author}</div>
-                <div className="text-sm opacity-70 mb-2">{item.date}</div>
-                <div className="whitespace-pre-line">{item.content}</div>
-              </div>
-            ))}
+            {messages.map((item) => {
+              const isAdmin = item.author_role === "administrator" || item.is_admin || item.author === "admin";
+              const messageClass = isAdmin
+                ? "border rounded-base p-4 bg-blue-50 border-blue-200 text-blue-900"
+                : "border rounded-base p-4 bg-neutral-50 border-neutral-200";
+
+              return (
+                <div key={item.id} className={messageClass}>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="font-semibold">{item.author}</div>
+                    {isAdmin && (
+                      <span className="text-xs font-semibold text-blue-700 uppercase">Admin</span>
+                    )}
+                  </div>
+                  <div className="text-sm opacity-70 mb-2">{item.date}</div>
+                  <div className="whitespace-pre-line">{item.content}</div>
+                </div>
+              );
+            })}
           </div>
         )}
 
