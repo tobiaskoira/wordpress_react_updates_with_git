@@ -7,7 +7,7 @@
     <section class="mt-6 flex flex-col sm:flex-row justify-content:space-between items-center">
     <div id="react-breadcrumbs"></div> 
 
-    <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1>
+    <!-- <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1> -->
 
     </section>
 
