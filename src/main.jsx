@@ -7,6 +7,7 @@ import Profile from "./Profile";
 import Posts from "./Posts";  
 import AuthButton from "./Authbutton"
 import Tickets  from "./Tickets";
+import TicketPage from "./TicketPage";
 // 🔹 Mount Breadcrumbs
 const breadcrumbsEl = document.getElementById("react-breadcrumbs");
 if (breadcrumbsEl) {
@@ -36,6 +37,11 @@ if (postsEl) {
 const ticketsEl = document.getElementById("react-profile-tickets");
 if (ticketsEl) {
   createRoot(ticketsEl).render(<Tickets />);
+}
+// 🔹 Mount TicketPage
+const ticketPageEl = document.getElementById("react-ticket-page");
+if (ticketPageEl) {
+  createRoot(ticketPageEl).render(<TicketPage />);
 }
 // 🔹 Mount AuthButton
 const authButtonEl = document.getElementById("react-auth-button");

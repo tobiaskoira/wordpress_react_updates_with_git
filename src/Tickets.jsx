@@ -89,28 +89,28 @@ export default function Tickets() {
         <div className="flex-1 p-4">
         <h1 className="text-2xl font-bold mb-6">My Tickets</h1>
 
-        <form onSubmit={handleSubmit} className="mb-8 border p-4 rounded-base">
-            <h2 className="text-xl font-semibold mb-4">Submit a Ticket</h2>
+        <form onSubmit={handleSubmit} className="grid gap-6 mb-6 md:grid-cols-2">
+            <h2 className="text-xl font-semibold mb-4text-3xl font-bold tracking-tight text-heading md:text-4xl">Submit a Ticket</h2>
 
             <input
             type="text"
             placeholder="Ticket title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full border p-3 mb-3 rounded-base"
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
             />
 
             <textarea
             placeholder="Describe your issue"
             value={content}
             onChange={(e) => setContent(e.target.value)}
-            className="w-full border p-3 mb-3 rounded-base min-h-[140px]"
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
             />
 
             <button
             type="submit"
             disabled={creating}
-            className="border rounded-base px-4 py-2"
+            className="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
             >
             {creating ? "Submitting..." : "Submit Ticket"}
             </button>
