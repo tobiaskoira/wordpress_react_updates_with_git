@@ -43,6 +43,9 @@
                     <li>
                         <div id="react-auth-button"></div>
                     </li>
+                                       <li>
+                        <p>test</p>
+                    </li>
                     </ul>
                 </div>
                
