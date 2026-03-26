@@ -106,7 +106,7 @@ export default function Tickets() {
 
 
         <form onSubmit={handleSubmit} className="grid gap-6 mb-6 justify-items-start">
-            <h3 className="font-semibold mb-4 text-3xl tracking-tight text-heading md:text-4xl">Submit a Ticket</h3>
+            <h3 className="mb-4 text-2xl font-bold tracking-tight text-heading">Submit a <span class="text-fg-brand">Ticket</span></h3>
 
             <input
             type="text"

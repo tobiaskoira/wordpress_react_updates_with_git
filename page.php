@@ -7,7 +7,6 @@
     <section class="mt-6">
     
 
-    <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1>
 
     </section>
 
@@ -65,6 +64,8 @@
 </aside>
 
 <div class="p-4 flex-1">
+    <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl"><?php the_title(); ?></h1>
+
     <p class="mb-3 text-body">
         <?php
         while ( have_posts() ) :

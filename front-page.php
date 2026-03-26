@@ -2,7 +2,7 @@
 
 <main class="mx-auto max-w-[1400px] px-4 md:px-6 lg:px-8 pt-20">
     
-<div id="react-breadcrumbs"></div>
+<!-- <div id="react-breadcrumbs"></div> -->
 <section class="py-4">
 
 
