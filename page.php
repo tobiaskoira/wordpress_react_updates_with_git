@@ -19,7 +19,7 @@
    </svg>
 </button>
 
-<aside id="default-sidebar" class="absolute z-40 w-64 transition-transform -translate-x-full sm:translate-x-0 sm:relative sm:translate-x-0 h-auto" aria-label="Sidebar">
+<aside id="default-sidebar" class="absolute z-40 w-64 transition-transform -translate-x-full sm:relative sm:translate-x-0 h-auto" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
       <ul class="space-y-2 font-medium">
          <li>
