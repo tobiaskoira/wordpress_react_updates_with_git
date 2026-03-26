@@ -85,7 +85,7 @@ function mytheme_get_user_tickets() {
             'id'      => $ticket->ID,
             'title'   => $ticket->post_title,
             'content' => $ticket->post_content,
-            'status'  => get_post_meta($ticket->ID, 'ticket_status', true) ?: 'new',
+            'status'  => get_post_meta($ticket->ID, '_ticket_status', true) ?: 'new',
             'date'    => get_the_date('c', $ticket->ID),
         ];
     }
@@ -142,7 +142,7 @@ function mytheme_get_single_ticket(WP_REST_Request $request) {
         'id'      => $ticket->ID,
         'title'   => $ticket->post_title,
         'content' => $ticket->post_content,
-        'status'  => get_post_meta($ticket->ID, 'ticket_status', true) ?: 'new',
+        'status'  => get_post_meta($ticket->ID, '_ticket_status', true) ?: 'new',
         'date'    => get_the_date('c', $ticket->ID),
     ]);
 }
